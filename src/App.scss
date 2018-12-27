@@ -1,5 +1,45 @@
+// This is the single file output by sass. It is intended to ONLY @import other files.
+
+// BASE
+@import './css/base/normalize';
+@import './css/base/vars';
+@import './css/base/body-element';
+
+// LAYOUTS
+@import './css/layouts/grid';
+
+// MODULES
+@import './css/modules/outer-nav';
+
+.full-overlay{
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  background: rgba(0,0,0,0);
+  &.darky{
+    background: rgba(0,0,0,0.8);
+  }
+}
+
+
+
 .App {
   text-align: center;
+  .App-header {
+    background-color: $black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
 }
 
 .App-logo {
@@ -7,16 +47,7 @@
   height: 40vmin;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+
 
 .App-link {
   color: #61dafb;
