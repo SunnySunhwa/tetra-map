@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from "react-router-dom";
 
-class nav extends Component {
-  render() {
-    return (
-      <nav class="outer-nav right vertical">
-      <li><a href="/">Home</a></li>
-      <li><a href="/">About TetraMap</a></li>
-      <li><a href="/">TetraMap</a></li>
-      <li><a href="/">About Us</a></li>
-      <li><a href="/">Contact</a></li>
-      <li><a href="/">User</a></li>
-    </nav>
-    );
-  }
-}
 
-export default nav;
+const Nav = (props, context) => (
+  <div className="navigation outer-nav right vertical">
+    <div className="inner">
+    {/* <li><a href="/">HOME</a></li> */}
+      <Link to="/">Home</Link>
+      <Link to="/about-us">About us</Link>
+    </div>
+  </div>
+);
+
+export default Nav;
