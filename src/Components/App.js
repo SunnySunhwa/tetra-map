@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Route, Switch } from "react-router-dom";
-import Header from './views/partials/header';
-import Nav from './views/partials/nav';
-import Main from './views/main';
-import AboutUs from './views/about-us';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import CustomNavbar from './views/CustomNavbar';
+import Main from './views/Main';
+import AboutUs from './views/AboutUs';
 import dummy from '../dummy_data.json';
 import '../css/App.scss';
 
@@ -17,20 +16,21 @@ class App extends Component {
 
   render() {
     return (
-      <div class="perspective effect-rotate-left">
-      <div class="container">
-        <div class="outer-nav--return"></div>
-        <div id="viewport" class="l-viewport">
-          <div class="l-wrapper">
-          <Header />
+      <div className="perspective effect-rotate-left">
+      <div className="container">
+        <div className="outer-nav--return"></div>
+        <div id="viewport" className="l-viewport">
+          <div className="l-wrapper">
+          <Router>
+            <div>
+              <CustomNavbar />
+              <Route exact path="/" component={Main} />
+              <Route path="/aboutus" component={AboutUs} />
+            </div>
+          </Router>
           </div>
         </div>
       </div>
-      <Nav />
-      <Switch>
-        <Route exact path="/" component={Main} />
-        <Route exact path="/about-us" component={AboutUs} />
-      </Switch>
     </div>
     );
   }
