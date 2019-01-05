@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 export default class CustomNavbar extends Component {
   render() {
@@ -8,17 +7,23 @@ export default class CustomNavbar extends Component {
       <Nav default collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to="/">CodeLife</Link>
+            <a href="/">TetraMap</a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
-            <NavItem eventKey={1} componentClass={Link} href="/" to="/">
+            <NavItem eventKey={1} href="/">
               Home
             </NavItem>
-            <NavItem eventKey={2} componentClass={Link} href="/aboutus" to="/aboutus">
-              About
+            <NavItem eventKey={2} href="/login">
+              Login
+            </NavItem>
+            <NavItem eventKey={3} href="/signup">
+              Signup
+            </NavItem>
+            <NavItem eventKey={4} href="/aboutus">
+              AboutUs
             </NavItem>
           </Nav>
         </Navbar.Collapse>
