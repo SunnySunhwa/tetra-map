@@ -1,17 +1,29 @@
 // This is the single file output by sass. It is intended to ONLY @import other files.
 
 // BASE
-@import '../css/base/normalize';
-@import '../css/base/vars';
-@import '../css/base/body-element';
-@import '../css/base/foundation.min.css';
+@import 'base/fonts';
+@import 'base/normalize';
+@import 'base/vars';
+@import 'base/selection-colors';
+@import 'base/body-element';
+
 // LAYOUTS
 // @import '../css/layouts/grid';
 
+// LAYOUTS
+@import 'layouts/grid';
 // MODULES
-// @import '../css/modules/outer-nav';
-@import '../css/modules/custom-nav';
-@import '../css/modules/about-us';
+@import 'modules/device-notification';
+@import 'modules/section';
+@import 'modules/header';
+@import 'modules/side-nav';
+@import 'modules/intro';
+@import 'modules/work';
+@import 'modules/about';
+@import 'modules/contact';
+@import 'modules/hire';
+@import 'modules/outer-nav';
+
 
 .full-overlay{
   position: absolute;

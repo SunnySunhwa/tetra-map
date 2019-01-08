@@ -16,19 +16,29 @@ class App extends Component {
 
   render() {
     return (
-      <div className="off-canvas-wrapper">
-      <div className="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-
-        <div className="off-canvas-content" data-off-canvas-content>
-        <Router>
-          <div>
-            <CustomNavbar name={this.state.appName}/>
-            <Routes name={this.state.appName}/>
+    <div className="perspective effect-rotate-left">
+      <div className="container">
+        <div className="outer-nav--return"></div>
+        <div id="viewport" className="l-viewport">
+          <div className="l-wrapper">
+            <header className="header">
+              <a className="header--logo" href="/">
+                <p>TetraMap</p>
+              </a>
+              <div className="header--nav-toggle">
+                <span></span>
+              </div>
+            </header>
+            <Router>
+              <div>
+                <CustomNavbar/>
+                <Routes/>
+              </div>
+            </Router>
           </div>
-        </Router>
-          <hr/>
         </div>
       </div>
+       
     </div>
     );
   }
